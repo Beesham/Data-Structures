@@ -2,7 +2,7 @@ package quickSort;
 
 /**
  * In-place quick sort an array
- * @author Beesham Sarendranauth 
+ * @author Beesham Sarendranauth
  */
 public class QuickSort {
 
@@ -20,7 +20,7 @@ public class QuickSort {
 			}
 
 			while(l <= r && arr[l] >= pivot) {
-				r = r + 1;
+				r = r - 1;
 			}
 
 			if(l < r){
