@@ -7,7 +7,7 @@ package quickSort;
 public class QuickSort {
 
 	//Worst-case : O(n^2)
-	//Best-case : O(n)
+	//Best-case : O(n log n)
 	public static void sort(int arr[], int a, int b) {
 		if(a >= b) return;
 		int pivot = arr[b];
