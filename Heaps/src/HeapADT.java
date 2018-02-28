@@ -2,5 +2,10 @@
  * Heap abstract data type
  * @author Beesham Sarendranauth
  */
-public class HeapADT {
+public interface HeapADT<E> {
+	void insert(E o);
+	void removeMin(E o);
+	Object min();
+	int size();
+	boolean isEmpty();
 }
