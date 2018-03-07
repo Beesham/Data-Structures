@@ -30,8 +30,21 @@ public class Heap<E> implements HeapADT {
 	}
 
 
-	private void upHeap() {
+	private void upHeap(Comparable element) {
 		//TODO
+		int i = size;
+		if(element.compareTo(array[i]) < 0) {
+
+		}
+	}
+
+	/*
+		Swaps the position of the objects in an array
+	 */
+	private void swap(int p1, int p2) {
+		E temp = array[p1];
+		array[p1] = array[p2];
+		array[p2] = temp;
 	}
 
 	@Override
