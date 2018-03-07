@@ -3,14 +3,24 @@
  * @author Beesham Sarendranauth
  */
 public class Heap implements HeapADT {
-	@Override
-	public void insert(Object o) {
-		
+	/*
+	Keeps a count of the elements in the Heap
+	 */
+	private int size;
+
+	public Heap() {
+		this.size = 0;
 	}
 
 	@Override
-	public void removeMin(Object o) {
+	public void insert(Object o) {
 
+	}
+
+	@Override
+	public Object removeMin() {
+
+		return null;
 	}
 
 	@Override
@@ -20,7 +30,7 @@ public class Heap implements HeapADT {
 
 	@Override
 	public int size() {
-		return 0;
+		return size;
 	}
 
 	@Override

@@ -4,7 +4,7 @@
  */
 public interface HeapADT<E> {
 	void insert(E o);
-	void removeMin(E o);
+	Object removeMin();
 	Object min();
 	int size();
 	boolean isEmpty();
