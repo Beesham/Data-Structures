@@ -1,5 +1,7 @@
+package HeapADT;
+
 /**
- * Heap Data Structure
+ * HeapADT.Heap Data Structure
  * @author Beesham Sarendranauth
  */
 public class Heap<E> implements HeapADT {
@@ -7,7 +9,7 @@ public class Heap<E> implements HeapADT {
 	private static final int INIT_SIZE_OF_ARR = 10;
 
 	/*
-		Keeps a count of the elements in the Heap
+		Keeps a count of the elements in the HeapADT.Heap
 	 */
 	private int size;
 
@@ -24,6 +26,7 @@ public class Heap<E> implements HeapADT {
 	@Override
 	public void insert(Object o) {
 		//TODO
+
 	}
 
 
