@@ -25,16 +25,31 @@ public class Heap<E> implements HeapADT {
 
 	@Override
 	public void insert(Object o) {
-		//TODO
+		//increase the size of the heap
+		size++;
 
+		//the new element position is the new size
+		int newElementPos = size;
+
+		//set the new element to the last position of the array, i.e the last leaf node
+		array[newElementPos] = (E) o;
+
+		//restore order of heap
+		upHeap(newElementPos);
 	}
 
 
-	private void upHeap(Comparable element) {
-		//TODO
-		int i = size;
-		if(element.compareTo(array[i]) < 0) {
+	private void upHeap(int childPosition) {
+		//child parents' position in the array
+		int parentPos = childPosition/2;
 
+		//base case
+		if(parentPos == 0) return;
+
+		//compares the child and parents values to determine if order was violated
+		if(((Comparable)array[childPosition]).compareTo(array[parentPos]) < 0) {
+			swap(childPosition, parentPos);
+			upHeap(parentPos);
 		}
 	}
 
@@ -59,8 +74,7 @@ public class Heap<E> implements HeapADT {
 
 	@Override
 	public Object min() {
-		//TODO
-		return null;
+		return array[1];
 	}
 
 	@Override
