@@ -11,4 +11,11 @@ public class Element{
 	public Element(int i) {
 		this.i = i;
 	}
+
+	@Override
+	public String toString() {
+		return "Element{" +
+				"i=" + i +
+				'}';
+	}
 }
