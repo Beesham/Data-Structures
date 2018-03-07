@@ -2,29 +2,39 @@
  * Heap Data Structure
  * @author Beesham Sarendranauth
  */
-public class Heap implements HeapADT {
+public class Heap<E> implements HeapADT {
+
+	private static final int INIT_SIZE_OF_ARR = 10;
+
 	/*
-	Keeps a count of the elements in the Heap
+		Keeps a count of the elements in the Heap
 	 */
 	private int size;
 
+	/*
+		Array of elements in the heap
+	 */
+	private E array[];
+
 	public Heap() {
+		array = (E[]) new Object[INIT_SIZE_OF_ARR];
 		this.size = 0;
 	}
 
 	@Override
 	public void insert(Object o) {
-
+		//TODO
 	}
 
 	@Override
 	public Object removeMin() {
-
+		//TODO
 		return null;
 	}
 
 	@Override
 	public Object min() {
+		//TODO
 		return null;
 	}
 
@@ -35,6 +45,7 @@ public class Heap implements HeapADT {
 
 	@Override
 	public boolean isEmpty() {
+		//TODO
 		return false;
 	}
 }
