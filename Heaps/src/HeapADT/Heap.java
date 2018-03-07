@@ -84,7 +84,6 @@ public class Heap<E> implements HeapADT {
 
 	@Override
 	public boolean isEmpty() {
-		//TODO
-		return false;
+		return size() == 0;
 	}
 }
