@@ -26,10 +26,19 @@ public class Heap<E> implements HeapADT {
 		//TODO
 	}
 
+
+	private void upHeap() {
+		//TODO
+	}
+
 	@Override
 	public Object removeMin() {
 		//TODO
 		return null;
+	}
+
+	private void downHeap() {
+		//TODO
 	}
 
 	@Override
