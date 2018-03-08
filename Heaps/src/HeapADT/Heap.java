@@ -1,7 +1,7 @@
-package HeapADT;
+package heapADT;
 
 /**
- * HeapADT.Heap Data Structure
+ * heapADT.Heap Data Structure
  * @author Beesham Sarendranauth
  */
 public class Heap<E> implements HeapADT {
@@ -9,7 +9,7 @@ public class Heap<E> implements HeapADT {
 	private static final int INIT_SIZE_OF_ARR = 10;
 
 	/*
-		Keeps a count of the elements in the HeapADT.Heap
+		Keeps a count of the elements in the heapADT.Heap
 	 */
 	private int size;
 
@@ -89,7 +89,7 @@ public class Heap<E> implements HeapADT {
 		//right child position of the parent node position
 		int rightChild = (2 * parentPosition) + 1;
 
-		//restore order to heap by downheaping 
+		//restore order to heap by downheaping
 		if(array[leftChild] != null) {
 			if (((Comparable) array[parentPosition]).compareTo(array[leftChild]) > 0) {
 				swap(parentPosition, leftChild);

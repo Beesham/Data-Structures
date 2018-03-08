@@ -1,4 +1,4 @@
-package HeapADT;
+package heapADT;
 
 /**
  * Integer object that stores a single interger

@@ -1,7 +1,6 @@
 package test;
 
-import HeapADT.Element;
-import HeapADT.Heap;
+import heapADT.Heap;
 
 /**
  * Tests Heap methods

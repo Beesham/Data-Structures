@@ -1,7 +1,7 @@
-package HeapADT;
+package heapADT;
 
 /**
- * HeapADT.Heap abstract data type
+ * heapADT.Heap abstract data type
  * @author Beesham Sarendranauth
  */
 public interface HeapADT<E> {
