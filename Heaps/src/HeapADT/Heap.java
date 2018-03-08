@@ -64,12 +64,46 @@ public class Heap<E> implements HeapADT {
 
 	@Override
 	public Object removeMin() {
-		//TODO
-		return null;
+		//position of the minimum value in heap
+		int minPosition = 1;
+
+		//position of the last element in the heap
+		int lastNodeInHeap = size;
+
+		//get the minimum element in the heap
+		E o = (E) min();
+
+		//remove the minimum element from the heap and restore order
+		swap(minPosition, lastNodeInHeap);
+		array[lastNodeInHeap] = null;
+		size--;
+		downHeap(minPosition);
+
+		return o;
 	}
 
-	private void downHeap() {
-		//TODO
+	private void downHeap(int parentPosition) {
+		//left child position of a parent node position
+		int leftChild = 2 * parentPosition;
+
+		//right child position of the parent node position
+		int rightChild = (2 * parentPosition) + 1;
+
+		//restore order to heap by downheaping 
+		if(array[leftChild] != null) {
+			if (((Comparable) array[parentPosition]).compareTo(array[leftChild]) > 0) {
+				swap(parentPosition, leftChild);
+				downHeap(leftChild);
+				return;
+			}
+		}
+		if(array[rightChild] != null) {
+			if ((((Comparable) array[parentPosition]).compareTo(array[rightChild])) > 0) {
+				swap(parentPosition, rightChild);
+				downHeap(rightChild);
+				return;
+			}
+		}
 	}
 
 	@Override
