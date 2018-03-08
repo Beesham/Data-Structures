@@ -21,6 +21,8 @@ public class HeapTest {
 		System.out.println(heap.size());
 		System.out.println("Expected: false, Actual: " + heap.isEmpty());
 
+		System.out.println("Expected: 1, Actual: " + heap.removeMin());
+		System.out.println("Expected: 2, Actual: " + heap.removeMin());
 
 	}
 }
