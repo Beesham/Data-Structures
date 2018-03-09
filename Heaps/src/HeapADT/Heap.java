@@ -6,7 +6,7 @@ package heapADT;
  */
 public class Heap<E> implements HeapADT {
 
-	private static final int INIT_SIZE_OF_ARR = 10;
+	private static final int INIT_SIZE_OF_ARR = 1000001;
 
 	/*
 		Keeps a count of the elements in the heapADT.Heap
