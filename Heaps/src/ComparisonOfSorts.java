@@ -12,11 +12,11 @@ public class ComparisonOfSorts {
 	public static void main(String[] args) {
 		SortMe sortMe = new SortMe();
 
-		sortMe.genRandomNums();
+		/*sortMe.genRandomNums();
 		sortMe.runInsertionSortOnArr();
 
 		sortMe.genRandomNums();
-		sortMe.runQuickSortOnArr();
+		sortMe.runQuickSortOnArr();*/
 
 		sortMe.genRandomNums();
 		sortMe.runHeapSortOnArr();
