@@ -12,12 +12,14 @@ public class ComparisonOfSorts {
 	public static void main(String[] args) {
 		SortMe sortMe = new SortMe();
 
-		/*sortMe.genRandomNums();
+		/*
+		sortMe.genRandomNums();
 		sortMe.runInsertionSortOnArr();
 
 		sortMe.genRandomNums();
-		sortMe.runQuickSortOnArr();*/
+		sortMe.runQuickSortOnArr();
 
+*/
 		sortMe.genRandomNums();
 		sortMe.runHeapSortOnArr();
 	}
@@ -155,7 +157,7 @@ public class ComparisonOfSorts {
 			System.out.print("Run Heap Sort on a1?");
 			if(in.nextInt() == 1) {
 				long startTime = System.nanoTime();
-				HeapSort.sort(a1, a1.length - 1);
+				HeapSort.sort(a1, a1.length);
 				long endTime = System.nanoTime();
 				System.out.println(endTime - startTime);
 			}
@@ -163,7 +165,7 @@ public class ComparisonOfSorts {
 			System.out.print("\nRun Heap Sort on a2?");
 			if(in.nextInt() == 1) {
 				long startTime = System.nanoTime();
-				HeapSort.sort(a2, a2.length - 1);
+				HeapSort.sort(a2, a2.length);
 				long endTime = System.nanoTime();
 				System.out.println(endTime - startTime);
 			}
@@ -171,7 +173,7 @@ public class ComparisonOfSorts {
 			System.out.print("\nRun Heap Sort on a3");
 			if(in.nextInt() == 1) {
 				long startTime = System.nanoTime();
-				HeapSort.sort(a3, a3.length - 1);
+				HeapSort.sort(a3, a3.length);
 				long endTime = System.nanoTime();
 				System.out.println(endTime - startTime);
 			}
@@ -179,7 +181,7 @@ public class ComparisonOfSorts {
 			System.out.print("\nRun Heap Sort on a4?");
 			if(in.nextInt() == 1) {
 				long startTime = System.nanoTime();
-				HeapSort.sort(a4, a4.length - 1);
+				HeapSort.sort(a4, a4.length);
 				long endTime = System.nanoTime();
 				System.out.println(endTime - startTime);
 			}
@@ -187,7 +189,7 @@ public class ComparisonOfSorts {
 			System.out.print("\nRun Heap Sort on a5?");
 			if(in.nextInt() == 1) {
 				long startTime = System.nanoTime();
-				HeapSort.sort(a5, a5.length - 1);
+				HeapSort.sort(a5, a5.length);
 				long endTime = System.nanoTime();
 				System.out.println(endTime - startTime);
 			}
@@ -195,7 +197,7 @@ public class ComparisonOfSorts {
 			System.out.print("\nRun Heap Sort on a6?");
 			if(in.nextInt() == 1) {
 				long startTime = System.nanoTime();
-				HeapSort.sort(a6, a6.length - 1);
+				HeapSort.sort(a6, a6.length);
 				long endTime = System.nanoTime();
 				System.out.println(endTime - startTime);
 			}
