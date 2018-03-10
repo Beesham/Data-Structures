@@ -89,16 +89,21 @@ public class Heap<E> implements HeapADT {
 		//right child position of the parent node position
 		int rightChild = (2 * parentPosition) + 1;
 
+		if(parentPosition == 0) return;
+		if(leftChild >= INIT_SIZE_OF_ARR || rightChild >= INIT_SIZE_OF_ARR) return;
+
 		//restore order to heap by downheaping
-		if(array[leftChild] != null) {
-			if (((Comparable) array[parentPosition]).compareTo(array[leftChild]) > 0) {
-				swap(parentPosition, leftChild);
-				downHeap(leftChild);
-				return;
+		if(array[leftChild] != null ) {
+			if(array[rightChild] != null && ((Comparable) array[leftChild]).compareTo(array[rightChild]) < 0) {
+				if (((Comparable) array[parentPosition]).compareTo(array[leftChild]) > 0) {	// > for min
+					swap(parentPosition, leftChild);
+					downHeap(leftChild);
+					return;
+				}
 			}
 		}
 		if(array[rightChild] != null) {
-			if ((((Comparable) array[parentPosition]).compareTo(array[rightChild])) > 0) {
+			if ((((Comparable) array[parentPosition]).compareTo(array[rightChild])) > 0) { // > for min
 				swap(parentPosition, rightChild);
 				downHeap(rightChild);
 				return;
