@@ -23,6 +23,8 @@ public class Heap<E> implements HeapADT {
 		this.size = 0;
 	}
 
+	//Worst case: O(log n)
+	//Best case: O(1)
 	@Override
 	public void insert(Object o) {
 		//increase the size of the heap
@@ -62,6 +64,8 @@ public class Heap<E> implements HeapADT {
 		array[p2] = temp;
 	}
 
+	//Worst case: O(log n)
+	//Best case: O(1)
 	@Override
 	public Object removeMin() {
 		//position of the minimum value in heap

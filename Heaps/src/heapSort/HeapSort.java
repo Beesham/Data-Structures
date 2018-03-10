@@ -8,6 +8,8 @@ import heapADT.Heap;
  */
 public class HeapSort {
 
+	//Worst case: O(log n)
+	//Best case: O(1)
 	public static int[] sort(int array[], int sizeOfArray) {
 
 		//Construct heap

@@ -2,6 +2,7 @@ import heapSort.HeapSort;
 import insertionSort.InsertionSort;
 import quickSort.QuickSort;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -12,14 +13,12 @@ public class ComparisonOfSorts {
 	public static void main(String[] args) {
 		SortMe sortMe = new SortMe();
 
-		/*
 		sortMe.genRandomNums();
 		sortMe.runInsertionSortOnArr();
 
 		sortMe.genRandomNums();
 		sortMe.runQuickSortOnArr();
 
-*/
 		sortMe.genRandomNums();
 		sortMe.runHeapSortOnArr();
 	}
@@ -45,8 +44,9 @@ public class ComparisonOfSorts {
 		}
 
 		private void randomize(int arr[]) {
+			Random rand = new Random(100);
 			for (int i = 0; i < arr.length; i++) {
-				arr[i] = (int) (Math.random()*100 + 1);
+				arr[i] = rand.nextInt();//(int) (Math.random()*100 + 1);
 			}
 		}
 
