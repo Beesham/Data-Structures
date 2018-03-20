@@ -23,6 +23,7 @@ public class HeapSort {
 		//remove root of heap as that will be the min num in the sequence
 		for(int i = 0; i < sizeOfArray; i++) {
 			array[i] = (int) heap.removeMin();
+			System.out.println(array[i]);
 		}
 
 		return array;
