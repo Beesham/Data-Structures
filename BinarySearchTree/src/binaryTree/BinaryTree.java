@@ -37,4 +37,22 @@ public class BinaryTree implements BinaryTreeADT{
 		//TODO
 		return null;
 	}
+
+	//Auxiliary method to remove
+	private Node deleteNode(Node n) {
+		//TODO
+		return null;
+	}
+
+	//Auxiliary method to remove
+	private Node findLeftMostNode(Node n){
+		//TODO
+		return null;
+	}
+
+	private Node deleteLeftMostNode(Node n){
+		//TODO
+		return null;
+	}
+
 }
