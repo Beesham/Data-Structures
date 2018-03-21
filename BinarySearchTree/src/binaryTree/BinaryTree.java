@@ -4,7 +4,7 @@ package binaryTree;
  * @author Beesham Sarendranauth
  * BinaruyTree Search implementation
  */
-public class BinaryTree implements BinaryTreeADT{
+public class BinaryTree<E extends Comparable> implements BinaryTreeADT{
 
 	/*
 		Head of the tree
@@ -16,24 +16,50 @@ public class BinaryTree implements BinaryTreeADT{
 	}
 
 	@Override
-	public Object search(Object o) {
+	public Object search(Comparable o) {
+		//TODO
+		Node<E> n = searchItem(o, head);
+		if(n == null) return null;
+
+		return n.getO();
+	}
+
+	private Node searchItem(Comparable o, Node n) {
+		if(n == null) return null;
+
+		//if(((Comparable) o).compareTo(n.getO())) {
+
+		//}
+
+		return null;
+	}
+
+	@Override
+	public Object find(Comparable o) {
 		//TODO
 		return null;
 	}
 
 	@Override
-	public Object find(Object o) {
+	public void insert(Comparable o) {
 		//TODO
-		return null;
+		Node n = new Node(o);
+		n.setLeft(null);
+		n.setRight(null);
+
+
+	}
+
+	private void insertItem(Comparable o, Node n) {
+
+	}
+
+	private void insertAtExternal(Comparable o, Node n) {
+
 	}
 
 	@Override
-	public void insert(Object o, Node n) {
-		//TODO
-	}
-
-	@Override
-	public Object remove(Object o) {
+	public Object remove(Comparable o) {
 		//TODO
 		return null;
 	}

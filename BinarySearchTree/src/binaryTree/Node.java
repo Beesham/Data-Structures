@@ -4,13 +4,15 @@ package binaryTree;
  * @author Beesham Sarendranauth
  * @param <E>
  */
-public class Node<E> {
+public class Node<E extends Comparable> {
 	private E o;
-	private Node next;
-	private Node previous;
+	private Node left;
+	private Node right;
 
 	public Node(E o) {
 		this.o = o;
+		left = null;
+		right = null;
 	}
 
 	public E getO() {
@@ -21,19 +23,19 @@ public class Node<E> {
 		this.o = o;
 	}
 
-	public Node getNext() {
-		return next;
+	public Node getLeft() {
+		return left;
 	}
 
-	public void setNext(Node next) {
-		this.next = next;
+	public void setLeft(Node left) {
+		this.left = left;
 	}
 
-	public Node getPrevious() {
-		return previous;
+	public Node getRight() {
+		return right;
 	}
 
-	public void setPrevious(Node previous) {
-		this.previous = previous;
+	public void setRight(Node right) {
+		this.right = right;
 	}
 }
