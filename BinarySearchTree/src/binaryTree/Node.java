@@ -48,4 +48,12 @@ public class Node<E extends Comparable> {
 	public void setParent(Node parent) {
 		this.parent = parent;
 	}
+
+	@Override
+	protected Node clone() throws CloneNotSupportedException {
+		Node n = new Node(getO());
+		n.setRight(right);
+		n.setLeft(left);
+		return n;
+	}
 }
