@@ -18,7 +18,6 @@ public class BinaryTree<E extends Comparable> implements BinaryTreeADT{
 	@Override
 	public Object search(Comparable o) {
 		Node<E> n = searchItem(o, head);
-		if(n == null) return null;
 		return n.getO();
 	}
 
@@ -36,8 +35,7 @@ public class BinaryTree<E extends Comparable> implements BinaryTreeADT{
 
 	@Override
 	public Object find(Comparable o) {
-		//TODO
-		return null;
+		return search(o);
 	}
 
 	@Override
@@ -76,25 +74,54 @@ public class BinaryTree<E extends Comparable> implements BinaryTreeADT{
 
 	@Override
 	public Object remove(Comparable o) {
-		//TODO
-		return null;
+		Node n = searchItem(o, head);
+		if(n.getO() == null) return null;
+		return deleteNode(n).getO();
 	}
 
 	//Auxiliary method to remove
 	private Node deleteNode(Node n) {
-		//TODO
-		return null;
+		Node tmp = null;
+		try {
+			tmp = n.clone();
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
+
+		if(n.getLeft().getO() == null && n.getRight().getO() == null) {
+			n.setO(null);
+			n.setRight(null);
+			n.setLeft(null);
+		}else if(n.getLeft().getO() != null && n.getRight().getO() == null){
+			n.setO(n.getLeft().getO());
+			n.setLeft(n.getLeft().getLeft());
+			n.setRight(n.getLeft().getRight());
+		}else if(n.getLeft().getO() != null && n.getRight().getO() == null){
+			n.setO(n.getLeft().getO());
+			n.setLeft(n.getLeft().getLeft());
+			n.setRight(n.getLeft().getRight());
+		}else{
+			Node newNode = findLeftMostNode(n.getRight());
+			Node newRight = deleteLeftMostNode(n.getRight());
+			n.setO(newNode.getO());
+			n.setRight(newRight);
+		}
+		return tmp;
 	}
 
 	//Auxiliary method to remove
 	private Node findLeftMostNode(Node n){
-		//TODO
-		return null;
+		if(n.getO() == null) return n.getParent();
+		return findLeftMostNode(n.getLeft());
 	}
 
 	private Node deleteLeftMostNode(Node n){
-		//TODO
-		return null;
+		if(n.getLeft().getO() == null) return n.getRight();
+		else{
+			Node newChild = deleteLeftMostNode(n.getLeft());
+			n.setLeft(newChild);
+			return n;
+		}
 	}
 
 }
