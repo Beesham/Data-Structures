@@ -15,14 +15,6 @@ public class Main {
 		binaryTree.insert(8);
 		binaryTree.insert(10);
 
-
-
-		int a = (int) binaryTree.search(2);
-		//int b = (int) binaryTree.search(5);
-
-		binaryTree.remove(6);
-		int c = (int) binaryTree.search(2);
-
-		System.out.println(a);
+		binaryTree.inOrderTraversal();
 	}
 }

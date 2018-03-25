@@ -124,4 +124,18 @@ public class BinaryTree<E extends Comparable> implements BinaryTreeADT{
 		}
 	}
 
+	public void inOrderTraversal() {inOrderTraversal(head);}
+
+	private void inOrderTraversal(Node root) {
+		if(root.getLeft().getO() == null && root.getRight().getO() == null){
+			System.out.print(root.getO() + " ");
+			return;
+		}else if(root.getLeft().getO() != null) {
+			inOrderTraversal(root.getLeft());
+			System.out.print(root.getO() + " ");
+			inOrderTraversal(root.getRight());
+			return;
+		}
+	}
+
 }
