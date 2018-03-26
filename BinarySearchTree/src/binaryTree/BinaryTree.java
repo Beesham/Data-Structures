@@ -23,7 +23,7 @@ public class BinaryTree<E extends Comparable> implements BinaryTreeADT{
 
 	private Node searchItem(Comparable o, Node n) {
 		//Base case
-		if(n.getO() == null) return n;
+		if(n.getO() == null || n.getO() == o) return n;
 
 		if(o.compareTo(n.getO()) < 0) { //If object < current object
 			return searchItem(o, n.getLeft());
@@ -77,6 +77,11 @@ public class BinaryTree<E extends Comparable> implements BinaryTreeADT{
 		Node n = searchItem(o, head);
 		if(n.getO() == null) return null;
 		return deleteNode(n).getO();
+	}
+
+	@Override
+	public void clear() {
+		head = new Node(null);
 	}
 
 	//Auxiliary method to remove
@@ -135,7 +140,10 @@ public class BinaryTree<E extends Comparable> implements BinaryTreeADT{
 			System.out.print(root.getO() + " ");
 			inOrderTraversal(root.getRight());
 			return;
+		}else if(root.getRight().getO() != null) {
+			System.out.print(root.getO() + " ");
+			inOrderTraversal(root.getRight());
+			return;
 		}
 	}
-
 }
