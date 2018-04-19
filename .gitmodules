@@ -1,0 +1,3 @@
+[submodule "MockSinglyLinkedList"]
+	path = MockSinglyLinkedList
+	url = https://github.com/Beesham/Data-Structures-MockSinglyLinkedList.git
