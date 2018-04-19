@@ -9,4 +9,5 @@ public interface BinaryTreeADT<E extends Comparable> {
 	Object find (E o);
 	void insert (E o);
 	Object remove (E o);
+	void clear();
 }
